@@ -1,6 +1,6 @@
-import com.codeborne.selenide.Condition;
+package tests;
+
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import org.assertj.core.api.SoftAssertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -25,7 +25,7 @@ public class PracticeFormTests {
         Configuration.startMaximized=true;
     }
     @Test
-    public void successFOrmSubmit(){
+    public void positivePracticeFormTest(){
 
         String firstName = "Santa",
                 lastName = "Clause",
@@ -61,7 +61,7 @@ public class PracticeFormTests {
         $("#firstName").setValue(firstName);
         $("#lastName").setValue(lastName);
         $("#userEmail").setValue(email);
-        $(byText("Male")).click();
+        $(byText(gender)).click();
         $("#userNumber").setValue(phone);
 
         //fill out Date of Birth
